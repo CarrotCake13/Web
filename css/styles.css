@@ -3,9 +3,25 @@ html, body {
     padding: 0;
 }
 
-nav{
+footer {
+    border-top: 2px solid #C1C1C1;
+}
+
+.header h1 {
+    float: left;
+}
+
+.header .logo {
+    float: left;
+}
+
+/* .header {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    padding: 10px;
+} */
+
+nav{
     background-color: #333;
     overflow: hidden;
 }
@@ -30,6 +46,30 @@ nav li a {
 
 nav li a:hover {
     background-color: #111;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.searchbar input[type=text] {
+  padding: 6px;
+  border: none;
+  font-size: 17px;
+  background: #C1C1C1;
+}
+
+.searchbar button:hover {
+  background: #ccc;
+}
+
+.searchbar button {
+  padding: 6px;
+  background: #C1C1C1;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
 }
 
 .logo {
