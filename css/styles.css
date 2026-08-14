@@ -1,10 +1,33 @@
+@font-face {
+    font-family: 'Resident Evil 4 Remake';
+    src: url('../Website Files/fonttemp/resident_evil_4_remake_font_by_snakeyboy_df7kacs.ttf') format('truetype');
+}
+
 html, body {
     margin: 0;
     padding: 0;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge legacy */
+}
+
+body {
+    min-height: 100vh;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
 }
 
 footer {
     border-top: 2px solid #C1C1C1;
+}
+
+h1 {
+    font-family: 'Resident Evil 4 Remake', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 
 .header h1 {
@@ -23,7 +46,7 @@ footer {
 }
 
 nav{
-    background-color: #333;
+    background-color: #C1C1C1;
     overflow: hidden;
     display: inline-block;
 }
@@ -86,3 +109,87 @@ nav li a:hover {
     width: 100%;
     height: auto;
   }
+
+.home-page {
+    background-image: url('../Website Files/homepagebg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.characters-page {
+    background-image: url('../Website Files/characterspagebg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.home-page h1,
+.home-page h2,
+.home-page p,
+.home-page li,
+.home-page a,
+.characters-page h1,
+.characters-page h2,
+.characters-page p,
+.characters-page li,
+.characters-page a {
+    color: #fff;
+}
+
+.site-footer {
+    background: rgba(193, 193, 193, 0.45);
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 20px 30px;
+    margin-top: 40px;
+    backdrop-filter: blur(2px);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-copy {
+    font-size: 0.9rem;
+    color: #fff;
+    max-width: 300px;
+    line-height: 1.5;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 10px 12px;
+    box-sizing: border-box;
+}
+
+.footer-links-placeholder {
+    width: 220px;
+    min-height: 80px;
+    border: 1px dashed rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.images img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin: 10px;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
