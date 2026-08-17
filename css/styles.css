@@ -8,6 +8,8 @@ html, body {
     padding: 0;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE/Edge legacy */
+    background: #000;
+    min-height: 100%;
 }
 
 body {
@@ -65,6 +67,19 @@ nav li {
     position: absolute;
     left: 50vw;
     transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar .searchbar {
+    order: 1;
+}
+
+.navbar nav {
+    order: 2;
+    position: relative;
 }
 
 nav li a {
@@ -83,13 +98,21 @@ nav li a:hover {
 .searchbar {
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 4px 6px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #C1C1C1;
+  width: fit-content;
+  max-width: 280px;
 }
 .searchbar input[type=text] {
-  padding: 6px;
+  padding: 5px 10px;
   border: none;
-  font-size: 17px;
+  font-size: 14px;
   background: #C1C1C1;
+  border-radius: 999px 0 0 999px;
+  outline: none;
+  width: 150px;
 }
 
 .searchbar button:hover {
@@ -97,11 +120,13 @@ nav li a:hover {
 }
 
 .searchbar button {
-  padding: 6px;
+  padding: 5px 12px;
   background: #C1C1C1;
-  font-size: 17px;
+  font-size: 14px;
   border: none;
   cursor: pointer;
+  border-radius: 0 999px 999px 0;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -112,7 +137,7 @@ nav li a:hover {
 
 .home-page {
     background-image: url('../Website Files/homepagebg.jpg');
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
@@ -120,7 +145,31 @@ nav li a:hover {
 
 .characters-page {
     background-image: url('../Website Files/characterspagebg.jpg');
-    background-size: cover;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.about-page {
+    background-image: url('../Website Files/aboutpagebg.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.contact-page {
+    background-image: url('../Website Files/contactpagebg.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.achievements-page {
+    background-image: url('../Website Files/achievementpagebg.png');
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
@@ -135,7 +184,22 @@ nav li a:hover {
 .characters-page h2,
 .characters-page p,
 .characters-page li,
-.characters-page a {
+.characters-page a,
+.about-page h1,
+.about-page h2,
+.about-page p,
+.about-page li,
+.about-page a,
+.contact-page h1,
+.contact-page h2,
+.contact-page p,
+.contact-page li,
+.contact-page a,
+.achievements-page h1,
+.achievements-page h2,
+.achievements-page p,
+.achievements-page li,
+.achievements-page a {
     color: #fff;
 }
 
