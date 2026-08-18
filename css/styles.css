@@ -137,41 +137,46 @@ nav li a:hover {
 
 .home-page {
     background-image: url('../Website Files/homepagebg.jpg');
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #fff;
 }
 
 .characters-page {
     background-image: url('../Website Files/characterspagebg.jpg');
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #fff;
 }
 
 .about-page {
     background-image: url('../Website Files/aboutpagebg.jpg');
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #fff;
 }
 
 .contact-page {
     background-image: url('../Website Files/contactpagebg.jpg');
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #fff;
 }
 
 .achievements-page {
-    background-image: url('../Website Files/achievementpagebg.png');
-    background-size: 100% 100%;
+    background-image: url('../Website Files/achievementpagebg.jpg');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #fff;
 }
 
