@@ -29,6 +29,58 @@
 <body class="characters-page">
     <h1>Welcome to the RE2R Wiki characters page</h1>
     <h2>About RE2R characters</h2>
+    <div class="characters-content">
+        <aside class="character-menu">
+            <h2>Characters</h2>
+            <button type="button" class="character-menu-button active" data-character="leon">Leon S. Kennedy</button>
+            <button type="button" class="character-menu-button" data-character="claire">Claire Redfield</button>
+            <button type="button" class="character-menu-button" data-character="ada">Ada Wong</button>
+            <button type="button" class="character-menu-button" data-character="william-birkin">William Birkin</button>
+            <button type="button" class="character-menu-button" data-character="mr-x">Mr. X</button>
+        </aside>
+        <div class="characters-layout">
+            <section class="character-panel">
+                <h2>Character information</h2>
+                <div class="home-feature-placeholder" id="character-information">
+                    Leon S. Kennedy information placeholder
+                </div>
+            </section>
+            <section class="character-panel character-image-panel">
+                <h2 id="featured-character">Leon S. Kennedy</h2>
+                <img src="Website Files/leon.jpg" alt="Leon S. Kennedy" class="character-image" id="character-image">
+            </section>
+            <section class="character-panel">
+                <h2>Character details</h2>
+                <div class="home-feature-placeholder" id="character-details">
+                    Leon S. Kennedy details placeholder
+                </div>
+            </section>
+        </div>
+    </div>
+    <script>
+        const characterData = {
+            leon: ['Leon S. Kennedy', 'Leon S. Kennedy information placeholder', 'Leon S. Kennedy details placeholder', 'Website Files/leon.jpg'],
+            claire: ['Claire Redfield', 'Claire Redfield information placeholder', 'Claire Redfield details placeholder', 'Website Files/claire.jpg'],
+            ada: ['Ada Wong', 'Ada Wong information placeholder', 'Ada Wong details placeholder', 'Website Files/ada.jpg'],
+            'william-birkin': ['William Birkin', 'William Birkin information placeholder', 'William Birkin details placeholder', 'Website Files/williambirkin.png'],
+            'mr-x': ['Mr. X', 'Mr. X information placeholder', 'Mr. X details placeholder', 'Website Files/mrx.png']
+        };
+
+        document.querySelectorAll('.character-menu-button').forEach((button) => {
+            button.addEventListener('click', () => {
+                const [name, information, details, image] = characterData[button.dataset.character];
+                document.querySelector('#featured-character').textContent = name;
+                document.querySelector('#character-information').textContent = information;
+                document.querySelector('#character-details').textContent = details;
+                const characterImage = document.querySelector('#character-image');
+                characterImage.src = image;
+                characterImage.alt = name;
+                characterImage.classList.toggle('character-image-transparent', button.dataset.character === 'mr-x');
+                document.querySelector('.character-menu-button.active').classList.remove('active');
+                button.classList.add('active');
+            });
+        });
+    </script>
 </body>
 <footer class="site-footer">
     <div class="footer-content">
