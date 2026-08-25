@@ -394,6 +394,46 @@ nav li a:hover {
     backdrop-filter: blur(2px);
 }
 
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 25px;
+    margin: 30px;
+}
+
+.about-panel h2 {
+    margin: 0 0 12px;
+    color: #fff;
+    text-align: center;
+}
+
+.about-panel:first-child {
+    order: 2;
+}
+
+.about-image-panel {
+    order: 1;
+}
+
+.about-image-panel {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 15px;
+}
+
+.about-image-panel .home-feature-placeholder {
+    aspect-ratio: auto;
+}
+
+.about-banner {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    object-position: top;
+}
+
 @media (max-width: 700px) {
     .home-content {
         display: block;
@@ -416,5 +456,14 @@ nav li a:hover {
     .characters-content {
         grid-template-columns: 1fr;
         margin: 30px 20px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        margin: 30px 20px;
+    }
+
+    .about-image-panel {
+        grid-template-rows: auto auto;
     }
 }
