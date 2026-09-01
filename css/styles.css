@@ -250,6 +250,7 @@ nav li a:hover {
 }
 
 .footer-links-placeholder {
+    float: right;
     width: 220px;
     min-height: 80px;
     border: 1px dashed rgba(255, 255, 255, 0.8);
@@ -350,6 +351,19 @@ nav li a:hover {
     margin: 30px;
 }
 
+.character-menu-column {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    align-items: center;
+    gap: 12px;
+}
+
+.character-menu-column h2 {
+    color: #fff;
+    text-align: center;
+}
+
 .character-menu {
     display: flex;
     flex-direction: column;
@@ -359,12 +373,6 @@ nav li a:hover {
     border: 2px solid rgba(255, 255, 255, 0.5);
     background: rgba(193, 193, 193, 0.45);
     backdrop-filter: blur(2px);
-}
-
-.character-menu h2 {
-    margin: 0 0 12px;
-    color: #fff;
-    text-align: center;
 }
 
 .character-menu-button {
