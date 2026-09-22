@@ -185,6 +185,109 @@ nav li a:hover {
     color: #fff;
 }
 
+.contact-content {
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) minmax(280px, 500px) minmax(220px, 1fr);
+    align-items: start;
+    gap: 30px;
+    margin: 30px;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    width: min(100%, 360px);
+    justify-self: start;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    min-height: 64px;
+    padding: 8px 14px;
+    box-sizing: border-box;
+    background: rgba(193, 193, 193, 0.45);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.contact-item img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    flex: 0 0 48px;
+    /* filter: grayscale(1) brightness(0) invert(1); */
+}
+
+.contact-item span {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.feedback-form {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 24px 24px;
+    box-sizing: border-box;
+    background: rgba(20, 20, 20, 0.68);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(3px);
+}
+
+.feedback-form h2 {
+    margin: 0 0 16px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.feedback-form label {
+    margin: 8px 0 5px;
+    color: #fff;
+    font-family: 'Resident Evil H2', serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+    padding: 9px 10px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.92);
+    color: #111;
+    font: inherit;
+}
+
+.feedback-form textarea {
+    resize: vertical;
+}
+
+.feedback-form button {
+    align-self: center;
+    min-width: 130px;
+    margin-top: 14px;
+    padding: 9px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: rgba(30, 30, 45, 0.95);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+}
+
+.feedback-form button:hover {
+    background: rgba(193, 193, 193, 0.75);
+    color: #111;
+}
+
 .achievements-page {
     background-image: url('../Website Files/achievementpagebg.jpg');
     background-size: cover;
@@ -500,5 +603,14 @@ nav li a:hover {
 
     .about-image-panel {
         grid-template-rows: auto auto;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        margin: 30px 20px;
+    }
+
+    .feedback-form {
+        grid-column: auto;
     }
 }
