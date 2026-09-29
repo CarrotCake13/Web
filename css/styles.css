@@ -220,7 +220,7 @@ nav li a:hover {
     height: 48px;
     object-fit: contain;
     flex: 0 0 48px;
-    /* filter: grayscale(1) brightness(0) invert(1); */
+    filter: grayscale(1) brightness(0) invert(1);
 }
 
 .contact-item span {
@@ -235,9 +235,9 @@ nav li a:hover {
     width: 100%;
     padding: 20px 24px 24px;
     box-sizing: border-box;
-    background: rgba(20, 20, 20, 0.68);
+    background: rgba(193, 193, 193, 0.45);
     border: 2px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(2px);
 }
 
 .feedback-form h2 {
@@ -277,7 +277,7 @@ nav li a:hover {
     margin-top: 14px;
     padding: 9px 18px;
     border: 1px solid rgba(255, 255, 255, 0.8);
-    background: rgba(30, 30, 45, 0.95);
+    background: rgba(16, 24, 33, 0.72);
     color: #fff;
     cursor: pointer;
     font: inherit;
@@ -286,6 +286,70 @@ nav li a:hover {
 .feedback-form button:hover {
     background: rgba(193, 193, 193, 0.75);
     color: #111;
+}
+
+.help-panel {
+    grid-column: 3;
+    width: min(100%, 300px);
+    justify-self: end;
+    padding: 18px 16px 14px;
+    box-sizing: border-box;
+    background: rgba(193, 193, 193, 0.45);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.help-panel h2 {
+    margin: 0 0 18px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.1rem;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+.help-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 2px solid rgba(255, 255, 255, 0.45);
+}
+
+.help-row:last-child {
+    margin-bottom: 0;
+}
+
+.help-row span {
+    color: #fff;
+    font-family: 'Resident Evil H2', serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.help-row a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 72px;
+    padding: 6px 10px;
+    background: rgba(11, 20, 36, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Resident Evil H2', serif;
+    font-size: 1rem;
+    text-transform: lowercase;
+}
+
+.help-row a:hover {
+    background: rgba(84, 122, 169, 0.78);
+    color: #fff;
 }
 
 .achievements-page {
@@ -610,7 +674,13 @@ nav li a:hover {
         margin: 30px 20px;
     }
 
-    .feedback-form {
+    .feedback-form,
+    .help-panel {
         grid-column: auto;
+    }
+
+    .help-panel {
+        width: 100%;
+        justify-self: stretch;
     }
 }
