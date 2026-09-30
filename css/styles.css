@@ -361,6 +361,71 @@ nav li a:hover {
     color: #fff;
 }
 
+.achievements-content {
+    margin: 30px;
+}
+
+.achievements-title {
+    margin: 0 0 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.achievement-tier {
+    display: grid;
+    grid-template-columns: 170px minmax(0, 525px) 280px;
+    align-items: center;
+    justify-content: start;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.achievement-tier-label,
+.achievement-completion {
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.achievement-scroll {
+    width: min(100%, 525px);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-color: rgba(255, 255, 255, 0.8) rgba(0, 0, 0, 0.55);
+    scrollbar-width: thin;
+}
+
+.achievement-icons {
+    display: grid;
+    grid-auto-columns: 88px;
+    grid-auto-flow: column;
+    gap: 15px;
+    width: max-content;
+    padding-bottom: 8px;
+}
+
+.achievement-icon {
+    display: block;
+    aspect-ratio: 1;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.58);
+    box-sizing: border-box;
+}
+
+.achievement-scroll::-webkit-scrollbar {
+    height: 9px;
+}
+
+.achievement-scroll::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.achievement-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.8);
+}
+
 .home-page h1,
 .home-page h2,
 .home-page p,
@@ -634,6 +699,41 @@ nav li a:hover {
     aspect-ratio: 2 / 1;
     object-fit: cover;
     object-position: top;
+}
+
+@media (max-width: 1050px) {
+    .achievements-content {
+        margin: 24px 20px;
+    }
+
+    .achievement-tier {
+        grid-template-columns: 120px minmax(0, 1fr);
+        grid-template-areas:
+            "label track"
+            ". completion";
+        gap: 8px;
+    }
+
+    .achievement-tier-label {
+        grid-area: label;
+        font-size: 2rem;
+    }
+
+    .achievement-completion {
+        grid-area: completion;
+        justify-self: end;
+        font-size: 1.6rem;
+    }
+
+    .achievement-scroll {
+        grid-area: track;
+        width: 100%;
+    }
+
+    .achievement-icons {
+        grid-auto-columns: 64px;
+        gap: 12px;
+    }
 }
 
 @media (max-width: 700px) {
