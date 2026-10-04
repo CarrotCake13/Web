@@ -371,6 +371,15 @@ nav li a:hover {
     text-transform: uppercase;
 }
 
+.achievement-source {
+    margin: -12px 0 24px;
+    text-align: center;
+}
+
+.achievement-source a {
+    color: #fff;
+}
+
 .achievement-tier {
     display: grid;
     grid-template-columns: 170px minmax(0, 525px) 280px;
@@ -389,6 +398,10 @@ nav li a:hover {
     white-space: nowrap;
 }
 
+.achievement-completion {
+    font-size: 1.5rem;
+}
+
 .achievement-scroll {
     width: min(100%, 525px);
     overflow-x: auto;
@@ -399,19 +412,35 @@ nav li a:hover {
 
 .achievement-icons {
     display: grid;
-    grid-auto-columns: 88px;
+    grid-auto-columns: 100px;
     grid-auto-flow: column;
-    gap: 15px;
+    gap: 10px;
     width: max-content;
     padding-bottom: 8px;
 }
 
+.achievement-card {
+    width: 92px;
+    margin: 0;
+    text-align: center;
+}
+
 .achievement-icon {
     display: block;
+    width: 88px;
     aspect-ratio: 1;
+    object-fit: contain;
     border: 1px solid rgba(255, 255, 255, 0.8);
     background: rgba(0, 0, 0, 0.58);
     box-sizing: border-box;
+}
+
+.achievement-card figcaption {
+    margin-top: 6px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.2;
 }
 
 .achievement-scroll::-webkit-scrollbar {
@@ -731,8 +760,16 @@ nav li a:hover {
     }
 
     .achievement-icons {
-        grid-auto-columns: 64px;
-        gap: 12px;
+        grid-auto-columns: 76px;
+        gap: 10px;
+    }
+
+    .achievement-card {
+        width: 72px;
+    }
+
+    .achievement-icon {
+        width: 68px;
     }
 }
 
