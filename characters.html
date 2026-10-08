@@ -43,7 +43,15 @@
             <section class="character-panel">
                 <h2>Character information</h2>
                 <div class="info-placeholder" id="character-information">
-                    Leon S. Kennedy information placeholder
+                    Age: 21
+
+Gender: Male
+
+Occupation: Rookie Raccoon City Police Department officer
+
+Role: Arrives in Raccoon City for his first day as a police officer.
+
+Background: Joined the police force hoping to help people. He is quickly separated from Claire when the outbreak overwhelms the city.
                 </div>
             </section>
             <section class="character-panel character-image-panel">
@@ -53,18 +61,49 @@
             <section class="character-panel">
                 <h2>Character details</h2>
                 <div class="info-placeholder" id="character-details">
-                    Leon S. Kennedy details placeholder
+                    Starting weapon: Matilda, a 9mm handgun with a burst-fire upgrade.
+
+Other weapons: Finds and upgrades weapons including the W-870 shotgun and Lightning Hawk magnum.
+
+Gameplay: Leon's campaign features the RPD, sewers, and NEST laboratory, with puzzles and limited supplies to manage.
+
+Health: His condition is shown as Fine, Caution, or Danger. Healing items restore health; the game does not show a numeric HP total.
                 </div>
             </section>
         </div>
     </div>
     <script>
         const characterData = {
-            leon: ['Leon S. Kennedy', 'Leon S. Kennedy information placeholder', 'Leon S. Kennedy details placeholder', 'Website Files/leon.jpg'],
-            claire: ['Claire Redfield', 'Claire Redfield information placeholder', 'Claire Redfield details placeholder', 'Website Files/claire.jpg'],
-            ada: ['Ada Wong', 'Ada Wong information placeholder', 'Ada Wong details placeholder', 'Website Files/ada.jpg'],
-            'william-birkin': ['William Birkin', 'William Birkin information placeholder', 'William Birkin details placeholder', 'Website Files/williambirkin.png'],
-            'mr-x': ['Mr. X', 'Mr. X information placeholder', 'Mr. X details placeholder', 'Website Files/mrx.png']
+            leon: [
+                'Leon S. Kennedy',
+                'Age: 21\n\nGender: Male\n\nOccupation: Rookie Raccoon City Police Department officer\n\nRole: Arrives in Raccoon City for his first day as a police officer.\n\nBackground: Joined the police force hoping to help people. He is quickly separated from Claire when the outbreak overwhelms the city.',
+                'Starting weapon: Matilda, a 9mm handgun with a burst-fire upgrade.\n\nOther weapons: Finds and upgrades weapons including the W-870 shotgun and Lightning Hawk magnum.\n\nGameplay: His campaign features the RPD, sewers, and NEST laboratory, with puzzles and limited supplies to manage.\n\nHealth: His condition is shown as Fine, Caution, or Danger. Healing items restore health; the game does not show a numeric HP total.',
+                'Website Files/leon.jpg'
+            ],
+            claire: [
+                'Claire Redfield',
+                'Age: 19\n\nGender: Female\n\nOccupation: College student\n\nRole: Travels to Raccoon City looking for her brother, Chris Redfield.\n\nBackground: Resourceful and determined, she teams up with a young girl named Sherry to get her to safety.',
+                'Starting weapon: SLS 60 revolver, which can use different ammunition types.\n\nOther weapons: Her arsenal includes the GM 79 grenade launcher and MQ 11 submachine gun.\n\nGameplay: Claire has a separate campaign, unique weapons, and encounters, including protecting Sherry.\n\nHealth: Her condition is shown as Fine, Caution, or Danger. Healing items restore health; the game does not show a numeric HP total.',
+                'Website Files/claire.jpg'
+            ],
+            ada: [
+                'Ada Wong',
+                'Age: Not stated in the game\n\nGender: Female\n\nOccupation: Spy and covert operative\n\nRole: Poses as an FBI agent while secretly investigating the G-virus.\n\nBackground: Her goals are concealed from Leon, and she uses him to help reach the Umbrella facility.',
+                'Weapon: B-12 handgun during her playable section.\n\nEquipment: The EMF Visualizer scans electronic devices and lets her interfere with circuits to open paths and solve obstacles.\n\nGameplay: Ada has a short, self-contained playable section focused on stealth, device puzzles, and escaping danger.\n\nHealth: She can take damage during gameplay; the game does not show a numeric HP total.',
+                'Website Files/ada.jpg'
+            ],
+            'william-birkin': [
+                'William Birkin',
+                'Age: 36\n\nGender: Male\n\nOccupation: Umbrella virologist and lead researcher on the G-virus\n\nRole: After Umbrella operatives attack him, he injects himself with the virus rather than surrendering his research.\n\nBackground: His transformation threatens both Raccoon City and his daughter, Sherry.',
+                'Combat: A multi-stage boss who mutates into increasingly powerful G forms as the story progresses.\n\nAttacks: Uses mutated claws and limbs at close range; later forms grow additional eyes and appendages that create new attack patterns.\n\nStrategy: Target the exposed eyes on his mutated body and use ammunition carefully. Environmental hazards can help in some encounters.\n\nHealth: Boss toughness and damage depend on difficulty; he has no player-style condition display.',
+                'Website Files/williambirkin.png'
+            ],
+            'mr-x': [
+                'Mr. X (Tyrant T-00)',
+                'Age: Not applicable\n\nGender: Not applicable (engineered bioweapon)\n\nOccupation: Umbrella Tyrant, deployed as a pursuit and recovery weapon\n\nRole: Sent into the RPD to eliminate survivors and recover the G-virus sample.\n\nBackground: His relentless pursuit creates pressure to keep moving while exploring and solving puzzles.',
+                'Combat: Follows the player through parts of the RPD and attacks with powerful punches.\n\nWeakness: Gunfire can briefly stagger him, but ordinary weapons will not permanently defeat him during the pursuit.\n\nStrategy: Break line of sight and keep moving; his footsteps can help you track his location.\n\nHealth: Has no player-style health meter. He can be temporarily incapacitated, but returns until the story resolves the encounter.',
+                'Website Files/mrx.png'
+            ]
         };
 
         document.querySelectorAll('.character-menu-button').forEach((button) => {
