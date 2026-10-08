@@ -30,6 +30,8 @@
     <main class="achievements-content">
         <h1 class="achievements-title">Resident Evil 2 Remake Achievements</h1>
         <p class="achievement-source">Trophy icons from <a href="https://www.exophase.com/game/resident-evil-2-psn/trophies/">Exophase's Resident Evil 2 PS4 trophy list</a>.</p>
+        <div class="achievements-layout">
+            <div class="achievement-list">
         <section class="achievement-tier" aria-label="Bronze trophies">
             <h2 class="achievement-tier-label">Bronze</h2>
             <div class="achievement-scroll" role="group" aria-label="30 bronze trophy icons" tabindex="0">
@@ -49,7 +51,7 @@
                     <figure class="achievement-card"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/VerminExtermination.png" alt="Vermin Extermination" title="Vermin Extermination"><figcaption>Vermin Extermination</figcaption></figure>
                     <figure class="achievement-card"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/AVault-likeMind.png" alt="A Vault-like Mind" title="A Vault-like Mind"><figcaption>A Vault-like Mind</figcaption></figure>
                     <figure class="achievement-card"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/FirstBreak-In.png" alt="First Break-In" title="First Break-In"><figcaption>First Break-In</figcaption></figure>
-                    <figure class="achievement-card"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/BonAppetit.png" alt="Bon AppÃ©tit" title="Bon AppÃ©tit"><figcaption>Bon AppÃ©tit</figcaption></figure>
+                    <figure class="achievement-card"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/BonAppetit.png" alt="Bon App&#233;tit" title="Bon App&#233;tit"><figcaption>Bon App&#233;tit</figcaption></figure>
                     <figure class="achievement-card"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/ZombieRoundup.png" alt="Zombie Roundup" title="Zombie Roundup"><figcaption>Zombie Roundup</figcaption></figure>
                     <figure class="achievement-card"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/LikeSkeetShooting.png" alt="Like Skeet Shooting" title="Like Skeet Shooting"><figcaption>Like Skeet Shooting</figcaption></figure>
                     <figure class="achievement-card"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/KeepTheirHeadsRingin.png" alt="Keep Their Heads Ringin'" title="Keep Their Heads Ringin'"><figcaption>Keep Their Heads Ringin'</figcaption></figure>
@@ -107,12 +109,125 @@
             </div>
             <h2 class="achievement-completion">1 Achievement</h2>
         </section>
+            </div>
+            <aside class="achievement-details" id="achievement-details" aria-live="polite" hidden>
+                <div class="achievement-details-heading">
+                    <img class="achievement-details-icon" src="" alt="">
+                    <div>
+                        <h2 class="achievement-details-name"></h2>
+                        <p class="achievement-details-tier"></p>
+                    </div>
+                </div>
+                <h3>Description</h3>
+                <p class="achievement-details-description"></p>
+            </aside>
+        </div>
     </main>
     <footer class="site-footer">
         <div class="footer-content">
-            <div class="footer-copy">Â© 2026 RE2R Wiki. All information is open source.</div>
+            <div class="footer-copy">&copy; 2026 RE2R Wiki. All information is open source.</div>
             <div class="footer-links-placeholder">Links placeholder<br>To be added later</div>
         </div>
     </footer>
+<script>
+    const achievementDescriptions = {
+        "Raccoon City Native": "Obtain all trophies.",
+        "Welcome to the City of the Dead": "Make it to the police station.",
+        "Path to the Goddess": "Solve the Goddess Statue puzzle.",
+        "Never-Ending Rain": "Escape the police station.",
+        "Hack Complete": "Complete Ada's segment.",
+        "Hide and Seek": "Complete Sherry's segment.",
+        "A Great Need for a Shower": "Escape from the sewers.",
+        "A Hero Emerges": "Complete Leon's story.",
+        "A Heroine Emerges": "Complete Claire's story.",
+        "Broken Umbrella": "Witness the true ending.",
+        "The Basics of Survival": "Combine two items together.",
+        "Hip to Add Squares": "Increase your inventory slots.",
+        "Customizer": "Customize a weapon.",
+        "Don't Need No Stinkin' Gun": "Defeat an enemy with a knife.",
+        "Eat This!": "Counterattack with a sub-weapon.",
+        "That'll Hold 'Em": "Use Wooden Boards to board up a window.",
+        "Vermin Extermination": "Destroy a Mr. Raccoon.",
+        "A Vault-like Mind": "Open a portable safe.",
+        "First Break-In": "Open a dial safe.",
+        "Bon Appétit": "Shoot the grenade you fed to an enemy.",
+        "Zombie Roundup": "Kill 3 enemies at once with a sub-weapon.",
+        "Like Skeet Shooting": "Shoot a zombie dog or a licker out of the air.",
+        "Keep Their Heads Ringin'": "Paralyze a licker's sense of hearing.",
+        "Hats Off!": "Shoot Tyrant's hat off his head.",
+        "Gotcha!": "Defeat Stage 2 G using the crane only once.",
+        "Treasure Hunter": "Using the photo hints, find 2 hidden items.",
+        "A Waist of Space": "Expand inventory slots to max.",
+        "One Slick Super-spy": "Use only the EMF Visualizer to complete Ada's gameplay segment.",
+        "Young Escapee": "Escape the bedroom within 60 seconds during Sherry's segment.",
+        "With Time to Spare": "Defeat Stage 4 G with 4+ minutes left until detonation.",
+        "In the Blink of an Eye": "Defeat Super Tyrant with 5+ minutes left until detonation.",
+        "Lore Explorer": "Read all of the files.",
+        "Complete Vermin Extermination": "Destroy all Mr. Raccoons.",
+        "Master of Unlocking": "Open all of the safes and locks in the game.",
+        "Leon \"S.\" Kennedy": "Complete Leon's story on Standard or Hardcore with an S rank.",
+        "Sizzling Scarlet Hero": "Complete Claire's story on Standard or Hardcore with an S rank.",
+        "Hardcore Rookie": "Complete Leon's story on Hardcore game mode.",
+        "Hardcore College Student": "Complete Claire's story on Hardcore game mode.",
+        "Frugalist": "Complete the game without using a recovery item.",
+        "Minimalist": "Clear the game without opening the item box.",
+        "A Small Carbon Footprint": "Take 14000 steps or fewer in one playthrough.",
+        "Grim Reaper": "Complete The 4th Survivor extra mode.",
+        "Hell of a Sheriff": "Complete the No Way Out scenario. (No training mode)",
+        "Got 'Em": "Destroy all Mr. Raccoons hidden in The Ghost Survivors mode.",
+        "Chasing Jill": "Read a letter left behind by Jill."
+    };
+
+    const achievementDetails = document.querySelector(".achievement-details");
+    const detailsIcon = achievementDetails.querySelector(".achievement-details-icon");
+    const detailsName = achievementDetails.querySelector(".achievement-details-name");
+    const detailsTier = achievementDetails.querySelector(".achievement-details-tier");
+    const detailsDescription = achievementDetails.querySelector(".achievement-details-description");
+    let activeAchievementCard;
+
+    function showAchievementDetails(card) {
+        activeAchievementCard = card;
+        const name = card.querySelector("figcaption").textContent.trim();
+        const tier = card.closest(".achievement-tier").querySelector(".achievement-tier-label").textContent.trim();
+        const icon = card.querySelector(".achievement-icon");
+
+        detailsIcon.src = icon.src;
+        detailsIcon.alt = name;
+        detailsName.textContent = name;
+        detailsTier.textContent = `${tier} Trophy`;
+        detailsDescription.textContent = achievementDescriptions[name] || "No description available.";
+        achievementDetails.hidden = false;
+    }
+
+    function hideAchievementDetailsIfInactive() {
+        if (
+            document.activeElement === activeAchievementCard ||
+            activeAchievementCard.matches(":hover") ||
+            achievementDetails.matches(":hover")
+        ) {
+            return;
+        }
+
+        achievementDetails.hidden = true;
+    }
+
+    document.querySelectorAll(".achievement-card").forEach(card => {
+        const name = card.querySelector("figcaption").textContent.trim();
+        const tier = card.closest(".achievement-tier").querySelector(".achievement-tier-label").textContent.trim();
+
+        card.tabIndex = 0;
+        card.setAttribute("aria-label", `${name}, ${tier} trophy`);
+        card.addEventListener("pointerenter", () => showAchievementDetails(card));
+        card.addEventListener("focus", () => showAchievementDetails(card));
+        card.addEventListener("pointerleave", () => {
+            if (activeAchievementCard === card) hideAchievementDetailsIfInactive();
+        });
+        card.addEventListener("blur", () => {
+            if (activeAchievementCard === card) hideAchievementDetailsIfInactive();
+        });
+    });
+
+    achievementDetails.addEventListener("pointerleave", hideAchievementDetailsIfInactive);
+</script>
 </body>
 </html>

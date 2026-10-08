@@ -365,6 +365,84 @@ nav li a:hover {
     margin: 30px;
 }
 
+.achievements-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 38%);
+    align-items: start;
+    gap: 30px;
+}
+
+.achievement-list {
+    min-width: 0;
+}
+
+.achievement-details {
+    position: sticky;
+    top: 20px;
+    min-height: 420px;
+    padding: 30px;
+    color: #fff;
+    background: rgba(193, 193, 193, 0.45);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+    box-sizing: border-box;
+}
+
+.achievement-details[hidden] {
+    display: none;
+}
+
+.achievement-details-heading {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    min-height: 132px;
+}
+
+.achievement-details-icon {
+    flex: 0 0 120px;
+    width: 120px;
+    height: 120px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.achievement-details-name {
+    margin: 0;
+    font-family: 'Resident Evil 4 Remake', serif;
+    font-size: 2rem;
+    line-height: 1.2;
+    text-transform: none;
+}
+
+.achievement-details-tier {
+    margin: 8px 0 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.achievement-details h3 {
+    margin: 36px 0 18px;
+    text-align: center;
+    font-family: 'Resident Evil H2', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.achievement-details-description {
+    margin: 0;
+    min-height: 120px;
+    padding: 22px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: Arial, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.65;
+}
+
 .achievements-title {
     margin: 0 0 24px;
     text-align: center;
@@ -382,7 +460,7 @@ nav li a:hover {
 
 .achievement-tier {
     display: grid;
-    grid-template-columns: 170px minmax(0, 525px) 280px;
+    grid-template-columns: minmax(100px, 150px) minmax(0, 525px) minmax(120px, 200px);
     align-items: center;
     justify-content: start;
     gap: 12px;
@@ -403,7 +481,7 @@ nav li a:hover {
 }
 
 .achievement-scroll {
-    width: min(100%, 525px);
+    width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
     scrollbar-color: rgba(255, 255, 255, 0.8) rgba(0, 0, 0, 0.55);
@@ -735,6 +813,46 @@ nav li a:hover {
         margin: 24px 20px;
     }
 
+    .achievements-layout {
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 38%);
+        gap: 20px;
+    }
+
+    .achievement-details {
+        min-height: 360px;
+        padding: 22px;
+    }
+
+    .achievement-details-heading {
+        gap: 16px;
+        min-height: 104px;
+    }
+
+    .achievement-details-icon {
+        flex-basis: 96px;
+        width: 96px;
+        height: 96px;
+    }
+
+    .achievement-details-name {
+        font-size: 1.65rem;
+    }
+
+    .achievement-details-tier {
+        font-size: 1rem;
+    }
+
+    .achievement-details h3 {
+        margin: 28px 0 14px;
+        font-size: 1.7rem;
+    }
+
+    .achievement-details-description {
+        min-height: 100px;
+        padding: 18px;
+        font-size: 1.1rem;
+    }
+
     .achievement-tier {
         grid-template-columns: 120px minmax(0, 1fr);
         grid-template-areas:
@@ -774,6 +892,54 @@ nav li a:hover {
 }
 
 @media (max-width: 700px) {
+    .achievements-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement-details {
+        position: fixed;
+        top: auto;
+        right: 12px;
+        bottom: 12px;
+        z-index: 10;
+        width: min(calc(100% - 24px), 360px);
+        min-height: 0;
+        max-height: 55vh;
+        margin-left: auto;
+        padding: 18px;
+        overflow-y: auto;
+    }
+
+    .achievement-details-heading {
+        gap: 14px;
+        min-height: 82px;
+    }
+
+    .achievement-details-icon {
+        flex-basis: 76px;
+        width: 76px;
+        height: 76px;
+    }
+
+    .achievement-details-name {
+        font-size: 1.45rem;
+    }
+
+    .achievement-details-tier {
+        font-size: 0.95rem;
+    }
+
+    .achievement-details h3 {
+        margin: 20px 0 10px;
+        font-size: 1.5rem;
+    }
+
+    .achievement-details-description {
+        min-height: 70px;
+        padding: 14px;
+        font-size: 1rem;
+    }
+
     .home-content {
         display: block;
         margin: 30px 20px;
