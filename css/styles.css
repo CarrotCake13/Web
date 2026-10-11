@@ -503,6 +503,12 @@ nav li a:hover {
     text-align: center;
 }
 
+.achievement-card:target .achievement-icon,
+.achievement-card:focus .achievement-icon {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
 .achievement-icon {
     display: block;
     width: 88px;
@@ -694,9 +700,38 @@ nav li a:hover {
 }
 
 .home-page .images img {
+    display: block;
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+}
+
+.home-page .images a {
+    position: relative;
+    display: block;
+    color: #1560a8;
+    text-align: center;
+    text-decoration: none;
+}
+
+.home-page .images a span {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    right: 10px;
+    padding: 8px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(193, 193, 193, 0.65);
+    backdrop-filter: blur(2px);
+    font-size: 1rem;
+    line-height: 1.35;
+    box-sizing: border-box;
+    transform: translateY(-50%);
+}
+
+.home-page .images a:hover span,
+.home-page .images a:focus-visible span {
+    text-decoration: underline;
 }
 
 .characters-content {

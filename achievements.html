@@ -36,7 +36,7 @@
             <h2 class="achievement-tier-label">Bronze</h2>
             <div class="achievement-scroll" role="group" aria-label="30 bronze trophy icons" tabindex="0">
                 <div class="achievement-icons">
-                    <figure class="achievement-card"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/WelcometotheCityoftheDead.png" alt="Welcome to the City of the Dead" title="Welcome to the City of the Dead"><figcaption>Welcome to the City of the Dead</figcaption></figure>
+                    <figure class="achievement-card" id="achievement-welcome-city"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/WelcometotheCityoftheDead.png" alt="Welcome to the City of the Dead" title="Welcome to the City of the Dead"><figcaption>Welcome to the City of the Dead</figcaption></figure>
                     <figure class="achievement-card"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/PathtotheGoddess.png" alt="Path to the Goddess" title="Path to the Goddess"><figcaption>Path to the Goddess</figcaption></figure>
                     <figure class="achievement-card"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/Never-EndingRain.png" alt="Never-Ending Rain" title="Never-Ending Rain"><figcaption>Never-Ending Rain</figcaption></figure>
                     <figure class="achievement-card"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/HackComplete.png" alt="Hack Complete" title="Hack Complete"><figcaption>Hack Complete</figcaption></figure>
@@ -48,7 +48,7 @@
                     <figure class="achievement-card"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/Don'tNeedNoStinkin'Gun.png" alt="Don't Need No Stinkin' Gun" title="Don't Need No Stinkin' Gun"><figcaption>Don't Need No Stinkin' Gun</figcaption></figure>
                     <figure class="achievement-card"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/EatThis.png" alt="Eat This!" title="Eat This!"><figcaption>Eat This!</figcaption></figure>
                     <figure class="achievement-card"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/That'llHold'Em.png" alt="That'll Hold 'Em" title="That'll Hold 'Em"><figcaption>That'll Hold 'Em</figcaption></figure>
-                    <figure class="achievement-card"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/VerminExtermination.png" alt="Vermin Extermination" title="Vermin Extermination"><figcaption>Vermin Extermination</figcaption></figure>
+                    <figure class="achievement-card" id="achievement-vermin-extermination"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/VerminExtermination.png" alt="Vermin Extermination" title="Vermin Extermination"><figcaption>Vermin Extermination</figcaption></figure>
                     <figure class="achievement-card"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/AVault-likeMind.png" alt="A Vault-like Mind" title="A Vault-like Mind"><figcaption>A Vault-like Mind</figcaption></figure>
                     <figure class="achievement-card"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/FirstBreak-In.png" alt="First Break-In" title="First Break-In"><figcaption>First Break-In</figcaption></figure>
                     <figure class="achievement-card"><img class="achievement-icon" src="Website Files/RE2 Trophy Icons/bronze/BonAppetit.png" alt="Bon App&#233;tit" title="Bon App&#233;tit"><figcaption>Bon App&#233;tit</figcaption></figure>
@@ -228,6 +228,13 @@
     });
 
     achievementDetails.addEventListener("pointerleave", hideAchievementDetailsIfInactive);
+
+    const linkedAchievement = document.getElementById(window.location.hash.slice(1));
+    if (linkedAchievement?.matches(".achievement-card")) {
+        showAchievementDetails(linkedAchievement);
+        linkedAchievement.focus({ preventScroll: true });
+        linkedAchievement.scrollIntoView({ block: "center", inline: "center" });
+    }
 </script>
 </body>
 </html>

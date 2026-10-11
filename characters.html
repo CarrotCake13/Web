@@ -106,20 +106,34 @@ Health: His condition is shown as Fine, Caution, or Danger. Healing items restor
             ]
         };
 
-        document.querySelectorAll('.character-menu-button').forEach((button) => {
+        function selectCharacter(button) {
+            const [name, information, details, image] = characterData[button.dataset.character];
+            document.querySelector('#featured-character').textContent = name;
+            document.querySelector('#character-information').textContent = information;
+            document.querySelector('#character-details').textContent = details;
+            const characterImage = document.querySelector('#character-image');
+            characterImage.src = image;
+            characterImage.alt = name;
+            characterImage.classList.toggle('character-image-transparent', button.dataset.character === 'mr-x');
+
+            document.querySelector('.character-menu-button.active').classList.remove('active');
+            button.classList.add('active');
+        }
+
+        const characterButtons = document.querySelectorAll('.character-menu-button');
+        characterButtons.forEach((button) => {
             button.addEventListener('click', () => {
-                const [name, information, details, image] = characterData[button.dataset.character];
-                document.querySelector('#featured-character').textContent = name;
-                document.querySelector('#character-information').textContent = information;
-                document.querySelector('#character-details').textContent = details;
-                const characterImage = document.querySelector('#character-image');
-                characterImage.src = image;
-                characterImage.alt = name;
-                characterImage.classList.toggle('character-image-transparent', button.dataset.character === 'mr-x');
-                document.querySelector('.character-menu-button.active').classList.remove('active');
-                button.classList.add('active');
+                selectCharacter(button);
             });
         });
+
+        const requestedCharacter = new URLSearchParams(window.location.search).get('character');
+        const requestedCharacterButton = [...characterButtons].find(
+            (button) => button.dataset.character === requestedCharacter
+        );
+        if (requestedCharacterButton) {
+            selectCharacter(requestedCharacterButton);
+        }
     </script>
 </body>
 <footer class="site-footer">
