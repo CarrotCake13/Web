@@ -614,6 +614,18 @@ nav li a:hover {
     box-sizing: border-box;
 }
 
+.footer-social-links {
+    gap: 8px;
+}
+
+.footer-social-links img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: grayscale(1) brightness(0) invert(1);
+}
+
 .home-content {
     display: grid;
     grid-template-columns: minmax(0, 40vw) minmax(0, 1fr);
